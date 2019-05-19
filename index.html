@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Oceanos Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="include/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="include/css/light_boot_dash.css">
+        <link rel="stylesheet" type="text/css" href="include/css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="include/css/dashboards/index.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <script src="include/jquery.js"></script>
+        <script src="raphael.min.js"></script>
+        <script src="justgage.js"></script>
+        <script src="main.js"></script>
+        <script src="include/js/chart.js/dist/Chart.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="sidebar-wrapper">
+                    <div class="flag"></div>
+                    <ul class="nav">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="maps.html">Maps</a></li>
+                        <li><a class="nav-link" href="motor.html">Motor</a></li>
+                        <li><a class="nav-link" href="battery.html">Battery</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-background" style='background-image: url("include/assets/flag.jpg");'></div>
+            </div>
+
+            <div class="main-panel">
+                <div id="connection">
+                    <i class="fas fa-wifi source-connected"></i> Connected
+                    <i class="fas fa-wifi source-disconnected"></i> Disconnected
+                    <i class="fas fa-wifi source-pending"></i> Establishing Connection
+                    <i class="fas fa-wifi source-unavailable"></i> Connection Unavailable
+                </div>
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card column_01">
+                                    <div class="card-body ">
+                                        <h4 class="card-title">Ship Speed History</h4>
+                                        <p class="card-category"></p>
+                                        <div id="speed_gauge"></div>
+                                        <canvas id="line-chart" width="400" height="225"></canvas>
+                                    </div>
+                                    <div class="card-footer ">
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-history"></i> Updates every 1 second.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card column_01">
+                                    <div class="card-body ">
+                                        <h4 class="card-title">Ship Speed History</h4>
+                                        <p class="card-category"></p>
+                                        <div id="engine_gauge"></div>
+                                        <canvas id="line-chart2" width="400" height="225"></canvas>
+                                    </div>
+                                    <div class="card-footer ">
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-history"></i> Updates every 1 second.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
